@@ -573,7 +573,7 @@ async def start_private(message): #, **kwargs
             callback_button2 = types.InlineKeyboardButton(text="⚙️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ ⚙️", url="https://t.me/RiyaddBlogg")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
-            await bot.send_message(chat_id, f'<b>🇹🇷 Merhaba, Ben bir oyun botuyum .\n\n🎯 Çeşitli oyunlar oynamak ve eğlenceli vakit geçirmek için benimle oynayabilirsin .\n\n⚙️ Benimle oynamak için beni bir gruba ekleyin ve Yönetici Yapın .</b>',  reply_markup=keyboard)
+            await bot.send_message(chat_id, f'<b>🇬🇪 Salam, Mən bir oyun botuyum .\n\n🎯 Müxtəlif oyunlar oynamaq ve əyləncəli vaxt keçirmək üçün mənimlə oynayabilirsin .\n\n⚙️ Mənimlə oynamaq üçün məni bir qruba Atın ve Yönetici Edin .</b>',  reply_markup=keyboard)
 
 
 
@@ -584,7 +584,7 @@ async def sessiz_sinema_baslat(message, **kwargs):
     oyun_modu = kwargs.get("mod", "oto-sunucu") # oto-sunucu, sabit, normal
 
     if chat_tipi == "private":
-        await bot.send_message(message.chat.id, "Bu komut sadece grup için kullanılabilir.")
+        await bot.send_message(message.chat.id, "Bu əmr sadece qrup üçün kullanılabilir.")
         return
 
     chat_id = message.chat.id #değişken, private veya group
@@ -708,8 +708,8 @@ async def sessiz_sinema_baslat(message, **kwargs):
 
     callback_button3 = types.InlineKeyboardButton(text="Sözə Bax 👀", callback_data="kelime_bak")
     callback_button2 = types.InlineKeyboardButton(text="Sözü Keç ♻️", callback_data="siradaki_kelime")
-    #callback_button = types.InlineKeyboardButton(text="Kelime Yaz ✏️", callback_data="kelime_gir")
-    callback_button = types.InlineKeyboardButton(text="Kendi Kelimem 📝", url=f"https://t.me/DTGGamebot?start={oyun_id}")
+    #callback_button = types.InlineKeyboardButton(text="Söz Yaz ✏️", callback_data="kelime_gir")
+    callback_button = types.InlineKeyboardButton(text="Mənim Sözüm 📝", url=f"https://t.me/DTGGamebot?start={oyun_id}")
 
 
     
@@ -772,7 +772,7 @@ async def sessiz_sinema_baslat(message, **kwargs):
 
             
 
-            await log_gonder(user_id=user_id, chat_id=chat_id, eylem="sessiz sinema başlattı", game_id=oyun_id)
+            await log_gonder(user_id=user_id, chat_id=chat_id, eylem="sessiz sinema başlatdı", game_id=oyun_id)
 
             return rastgele_kelime
         except Exception as e:
@@ -780,10 +780,10 @@ async def sessiz_sinema_baslat(message, **kwargs):
                 #bot.send_message(chat_id, "❌ Siz çok hızlı oynuyorsunuz değerli oyuncular! Bu da bir hataya yol açtı.")
                 #pass
                 if hata_msg == None:                        
-                    hata_msg = bot.send_message(chat_id, "⌛️ Sizi çok az bekleteceğim değerli oyuncular.").id
+                    hata_msg = bot.send_message(chat_id, "⌛️ Sizi çox az gözlədəcəm hörmətli oyuncular.").id
                 time.sleep(1)
             else:
-                await bot.send_message(chat_id, "❌ Hata oluştu. Lütfen tekrar deneyin.")
+                await bot.send_message(chat_id, "❌ Xata oluştu. Lütfen tekrar yoxlayın.")
                 await bot.send_message(kurucu_id, str(e))
                 await bot.send_message(kurucu_id, get_traceback(e))
                 break
@@ -832,7 +832,7 @@ async def kelime_turet_baslat(message, **kwargs):
         return
 
     keyboard = types.InlineKeyboardMarkup()
-    callback_button1 = types.InlineKeyboardButton(text="Pas Geç 🚫", callback_data="pas_gec")
+    callback_button1 = types.InlineKeyboardButton(text="Pas Keç 🚫", callback_data="pas_gec")
     callback_button2 = types.InlineKeyboardButton(text="İpucu 🔎", callback_data="ipucu_kelime")
     #callback_button3 = types.InlineKeyboardButton(text="Harf istiyorum 🌟", callback_data="kelimeturet_harf")
 
