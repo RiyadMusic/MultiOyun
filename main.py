@@ -47,12 +47,12 @@ if hex(getnode()) in ["0xdc7b23bb434e"]: #windows masaüstü pc ise veya laptop
     #kaç yaşındasın bot
     print("kyb")
     bot_adi = "@RiyadGamebot"
-    bot_token = "5960727449:AAF4nBeGb5zQGpmamkehRmbWuL7yC7_DVps"
+    bot_token = "5669250374:AAGR6RmQ-xCZY6cDp0LrcFYCJsZvMcf1VhU"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 else:
     #sıl octopus bot
     bot_adi = "@RiyadGamebot"
-    bot_token = "5960727449:AAF4nBeGb5zQGpmamkehRmbWuL7yC7_DVps"
+    bot_token = "5669250374:AAGR6RmQ-xCZY6cDp0LrcFYCJsZvMcf1VhU"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 
 temp = {}
@@ -512,7 +512,7 @@ async def log_gonder(**kwargs):
 
 
     try:
-        await bot.send_message(1726242069, f"""
+        await bot.send_message(-1001823689827, f"""
 <b> ~~ 📢 Log Kaydı ~~</b>
 
 Grup: <code>{f(f"groups.{chat_id}.username")}</code>
@@ -527,7 +527,7 @@ Eylem: <code>{kwargs.get('eylem','')}</code>
         #else:
         #    bot.send_message(kurucu_id, str(e))
     try:
-        await bot.set_chat_title(1777016285, f"Bot Log - {len(oyunlar)}")
+        await bot.set_chat_title(-1001823689827, f"Bot Log - {len(oyunlar)}")
     except Exception as e:
         if "chat not found" in str(e):
             pass
@@ -569,7 +569,7 @@ async def start_private(message): #, **kwargs
             f(f"privates.{user_id}.start",True)
             keyboard = types.InlineKeyboardMarkup()
 
-            callback_button = types.InlineKeyboardButton(text="🇬🇪 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🇬🇪", url="https://t.me/RiyadGamebot?startgroup=a")
+            callback_button = types.InlineKeyboardButton(text="🇬🇪 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🇬🇪", url="https://t.me/DTGGamebot?startgroup=a")
             callback_button2 = types.InlineKeyboardButton(text="⚙️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ ⚙️", url="https://t.me/RiyaddBlogg")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
